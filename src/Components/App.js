@@ -1,36 +1,24 @@
 import React from 'react';
+import { Route, Routes, useRoutes, BrowserRouter as Router } from "react-router-dom";
 import './App.css';
-import DaysTotalCollection from './DaysTotalCollection';
-import DaysTotalSupply from './DaysTotalSupply';
-import BloodStockSummary from './BloodStockSummary';
-import StockSummary from './StockSummary';
-import { Row, Col, Form} from 'react-bootstrap';
-import {GlobalProvider} from "../context/globalContext"
+import Home from './HomePage';
+import Admin from './Admin';
 
-export default function App() {
+function AppRoute () {
+   let routes = useRoutes([
+     {path : '/', element: <Home/>},
+     {path : '/admin', element : <Admin/>}
+   ]);
   
-    return (
-       <GlobalProvider>      
-        <div style={{margin:'60px 80px'}}>            
-            <Form.Group className='mb-4'>
-              <BloodStockSummary/>
-            </Form.Group>
-            <Row>
-              <Col>
-              <Form.Group className='mb-3'>
-                <DaysTotalCollection/>
-                </Form.Group>
-              </Col>
-              <Col>
-              <Form.Group className='mb-3'>
-                <DaysTotalSupply/>
-                </Form.Group>
-              </Col>
-            </Row>
-            <Row className='mb-3'>      
-                <StockSummary/>      
-            </Row>
-        </div>
-      </GlobalProvider>
-    )
+    return routes;
 }
+
+function App() {
+  return (
+    <Router>
+      <AppRoute/>
+    </Router>
+  );
+}
+
+export default App;
