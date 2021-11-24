@@ -3,8 +3,7 @@ import {Row, Col, Button} from 'react-bootstrap';
 import DatePicker from "react-datepicker";
 import './DatePicker.css';
 import "react-datepicker/dist/react-datepicker.css";
-import moment from 'moment';
-import { GlobalContext } from '../context/globalContext';
+import { GlobalContext } from '../../context/globalContext';
 
 export default function App() {
 

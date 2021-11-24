@@ -1,11 +1,11 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
 import DaysTotalCollection from './DaysTotalCollection';
 import DaysTotalSupply from './DaysTotalSupply';
 import BloodStockSummary from './BloodStockSummary';
 import StockSummary from './StockSummary';
 import { Row, Col, Form} from 'react-bootstrap';
-import {GlobalProvider} from "../context/globalContext";
+import {GlobalProvider} from "../../context/globalContext";
 
 export default function App() {
   

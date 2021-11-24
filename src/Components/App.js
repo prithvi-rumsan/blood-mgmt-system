@@ -1,8 +1,8 @@
 import React from 'react';
-import { Route, Routes, useRoutes, BrowserRouter as Router } from "react-router-dom";
+import { useRoutes, BrowserRouter as Router } from "react-router-dom";
 import './App.css';
-import Home from './HomePage';
-import Admin from './Admin';
+import Home from './HomePage/HomePage';
+import Admin from './Admin/Admin';
 
 function AppRoute () {
    let routes = useRoutes([
